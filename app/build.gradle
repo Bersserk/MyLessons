@@ -5,7 +5,7 @@ android {
     buildToolsVersion "22.0.1"
 
     defaultConfig {
-        applicationId "ua.kh.bersserk.lesson1"
+        applicationId "ua.kh.bersserk.lessons"
         minSdkVersion 15
         targetSdkVersion 22
         versionCode 1

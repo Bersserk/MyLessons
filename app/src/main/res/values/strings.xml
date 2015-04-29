@@ -1,7 +1,16 @@
 <resources>
-    <string name="app_name">Lesson1</string>
+    <string name="app_name">BersserK</string>
 
     <string name="myText">Нажми на кнопочку ниже и появится волшебная фраза!</string>
     <string name="action_settings">Settings</string>
     <string name="myBtn">Ку-ку, ёпта!</string>
+    <string name="txtLesson1">Урок 1</string>
+    <string name="txtLesson2">Урок 2</string>
+    <string name="txtLesson3">Урок 3</string>
+    <string name="txtLesson4">Урок 4</string>
+    <string name="title_activity_lesson2">Lesson2</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_lesson3">Lesson3</string>
+    <string name="title_activity_lesson4">Lesson4</string>
 </resources>

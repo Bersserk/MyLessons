@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="ua.kh.bersserk.lesson1" >
+    package="ua.kh.bersserk.lessons" >
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/bersserk"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
@@ -15,6 +15,18 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".Lesson2"
+            android:label="@string/title_activity_lesson2" >
+        </activity>
+        <activity
+            android:name=".Lesson3"
+            android:label="@string/title_activity_lesson3" >
+        </activity>
+        <activity
+            android:name=".Lesson4"
+            android:label="@string/title_activity_lesson4" >
         </activity>
     </application>
 

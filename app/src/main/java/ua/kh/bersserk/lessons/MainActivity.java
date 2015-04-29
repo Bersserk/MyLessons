@@ -1,16 +1,14 @@
-package ua.kh.bersserk.lesson1;
+package ua.kh.bersserk.lessons;
 
-import android.content.DialogInterface;
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
-import static ua.kh.bersserk.lesson1.R.mipmap.newMyImg1;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -49,34 +47,52 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
 
-                myImg.setImageDrawable(newMyImg1);
+//                myImg.setImageDrawable(new_my_img);
             }
         };
+
         myImg.setOnClickListener(oclMyImg);
 
 
     }
 
 
+    //    Тут я за тебя добавил меню для переключения между уроками.
+//    Потом научишься сам его клепать. Это не сложно.
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()) {
+            case R.id.lesson1:
+                finish();
+                Intent toLesson1 = new Intent(this, MainActivity.class);
+                startActivity(toLesson1);
+                break;
+
+            case R.id.lesson2:
+                finish();
+                Intent toLesson2 = new Intent(this, Lesson2.class);
+                startActivity(toLesson2);
+                break;
+
+            case R.id.lesson3:
+                finish();
+                Intent toLesson3 = new Intent(this, Lesson3.class);
+                startActivity(toLesson3);
+                break;
+
+            case R.id.lesson4:
+                finish();
+                Intent toLesson4 = new Intent(this, Lesson4.class);
+                startActivity(toLesson4);
+                break;
         }
-
         return super.onOptionsItemSelected(item);
     }
 }
