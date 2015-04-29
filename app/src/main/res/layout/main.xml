@@ -35,9 +35,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/myImg"
-        android:layout_alignBottom="@+id/myText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="103dp"
-        android:src="@mipmap/ic_launcher" />
+        android:src="@mipmap/ic_launcher"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/myBtn"
+        android:layout_alignStart="@+id/myBtn"
+        android:layout_marginTop="50dp" />
 
 </RelativeLayout>

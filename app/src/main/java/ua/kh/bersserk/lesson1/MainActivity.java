@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import static ua.kh.bersserk.lesson1.R.mipmap.newMyImg1;
+
 
 public class MainActivity extends ActionBarActivity {
 
@@ -19,10 +21,9 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.main);
 
         final TextView myText = (TextView) findViewById(R.id.myText);
-
         Button myBtn = (Button) findViewById(R.id.myBtn);
+        final ImageButton myImg = (ImageButton) findViewById(R.id.myImg);
 
-        ImageButton myImg = (ImageButton) findViewById(R.id.myImg);
 
         View.OnClickListener oclMyBtn = new View.OnClickListener() {
             @Override
@@ -31,8 +32,27 @@ public class MainActivity extends ActionBarActivity {
                 myText.setText("Ку ку, ёпта!");
             }
         };
+        myBtn.setOnClickListener(oclMyBtn);
 
-            myBtn.setOnClickListener(oclMyBtn);
+
+        View.OnClickListener oclMyText = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                myText.setText(R.string.myText);
+            }
+        };
+        myText.setOnClickListener(oclMyText);
+
+
+        View.OnClickListener oclMyImg = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                myImg.setImageDrawable(newMyImg1);
+            }
+        };
+        myImg.setOnClickListener(oclMyImg);
 
 
     }
